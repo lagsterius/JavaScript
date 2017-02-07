@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>Twitter Searcher</title>
+		<link rel='stylesheet' href='css/main.css'>
+		<script src='scripts/jq/jquery-1.7.1.js'></script>
+		<script src='scripts/selection.js'></script>
+		<script src='http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js'></script>
+	</head>
+	<body>
+		<div class="mc">
+			<form>
+				<input type='text'/>
+			</form>
+			<script id='tweets-template' type='text/x-	handlebars-teplate'>
+				{{#each this}}
+				<li>
+					<a target='blank' href='{{from}}'><img src={{img}} title='{{author}}'/></a>
+					<p><a target='blank' href='{{url}}'>{{text}}</a></p>
+				</li>
+				{{/each}}
+			</script>
+			<ul class='tweets'></ul>
+		</div>
+	</body>
+	<script src='scripts/my.js'></script>
+</html>
